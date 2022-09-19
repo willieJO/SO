@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Gerenciamento de processo">
+        Escalonamento: é uma parte do gerenciamento de processo.
+        Ato de escolher  o processo 
+        Pra que?  pra acessar o hardware(CPU,memoria, bla bla bla)
+        parar tomar posse dele.
+        {processo: precisa esta na memoria ram para ser processo}
+        faz mais sentido na multiprogramação.
+        Escalonamento: e a parte do SO que realiza o escalonamento 
+        Então é a parte do SO que decidi qual programa que vai usar a CPU
+        Escalonamento === software 
+        <div class="Algoritimo de escalonamento: ">
+            Algoritimo de escalonamento: 
+            E a logica usada pelo escalonador para realizar, o escalonamento
+            E uma logica que decide quem vai tomar posse do processador 
+        </div>
+        monoprogramatico: Exemplo(DOS) SOmente um processo de cada vez, o usuario
+        só consegue fazer uma coisa de cada vez, e tem que esperar
+        o processo terminar para fazer outra coisa.
+        multiprogramatico: Computadores domesticos, normalmente Computadores
+        com desempenho alto 
+        Servidor: Não tem uma respsota obvia igual ao do anterior
+        e não é focado no usuario, deixando a prioridade com o sistema
+        de entrada e saida
+        <div class="Troca de contexto">
+            troca de um processo pro outro.Quando tiro um processo
+            e coloco outro, salvando as informações do outro processo 
+            na memoria ram e pegando as informações do outro processo 
+            e carregar no processador  
+        </div> 
+        <div class="Tipos de processo">
+            <div class="processo">
+                processo = e um programa em execulção 
+            </div>
+            procesos que usam mais a cpu = CPU bound  = está mais ligado
+            ao processador 
+            Processo que usam mais a entrada e saida = IO bound =  esta mais
+            ligada com o sitema de entrada e saida 
+            caso precise iniciar o mais rapido possivel e tem um sisstema que 
+            usa entrada saida, e melhor dar prioridade para o IO 
+            pois enquanto estiver esperando a entrada e saida a CPU 
+            vai iniciar o processo até ter a resposta da entrada e saida 
+        </div>
+        Quando escalonar:
+        criação de um processo
+        termino de um processo
+        bloqueio de um processo 
+        interrupção de E/S
+        SO (Sistema)preemptivo: considera o tempo para considerar o 
+        escalonamento. E um tempo limite que é dado que ele tem para execultar
+        deois desse tempo o processo e retirado
+        SO (Sistema)não preemptivo: Não considera o tempo para considerar o 
+        escalonamento. Ele fica o tempo que for necesario / tempo que quiser 
+        
+    </div>
+</body>
+</html>
