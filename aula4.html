@@ -54,12 +54,91 @@
         termino de um processo
         bloqueio de um processo 
         interrupção de E/S
-        SO (Sistema)preemptivo: considera o tempo para considerar o 
+        SO (Sistema)preemptivo:(Windows, e etc) considera o tempo para considerar o 
         escalonamento. E um tempo limite que é dado que ele tem para execultar
         deois desse tempo o processo e retirado
-        SO (Sistema)não preemptivo: Não considera o tempo para considerar o 
+        SO (Sistema)não preemptivo:(DOS) Não considera o tempo para considerar o 
         escalonamento. Ele fica o tempo que for necesario / tempo que quiser 
-        
+        <div class="Algoritimos de escalonamento">
+            São eles: 
+            <ul>
+                <li>
+                    primeiro a chegar, primeiro a ser recebido
+                </li>
+                <li>
+                    job mais curto primeiro
+                </li>
+                <li>
+                    job de menor tempo restante
+                </li>
+                <li>
+                    Round Robin
+                </li>
+                <li>
+                    Fila de prioridade
+                </li>
+                <li>
+                    loteria
+                </li>
+                <li>
+                    escalonamento em tres niveis 
+                </li>
+            </ul>
+            <div class="primeiro a chegar, primeiro a ser recebido">
+                não preemptivo
+                no tempo 0 chegou o processo A que demora 7 unidades
+                de tempo para ser execultada 
+                No tempo 1 CHegou o processo B ele precisa de 3 unidades de tempo
+                para ser execultado
+                no tempo 3 processo C 2 unidades para ser execultadas 
+                no tempo 4 processo D com 4 unidades de tempo 
+                AAAAAAAAAAAAAAAAAAAAAAAAAAAAABBBBBBBBBBBBCCCCCCCCCCC    
+                ______________________________________________________
+                0   1   2   3   4   5   6   7   8   9   10   11   12
+                Se bloqueado, processo vai pro final da fila 
+            </div>
+            <div class="Job mais curto primeiro">
+                 não preempitivo 
+                 Execulta o mais corto dependneod da linha do tempo de processos
+                 que já possuem
+                 no caso vai execultar o A pq ele é o unico que existe no tempo 0
+                 depois ele vai pega os processeso que existem no tempo 7 e vai execultar
+                 o menor
+                 Chamado de altamente responvivel 
+                 Execulta o A, depois o menor que no caso é o C, depois o B, e por fim o D 
+                 Caso eles já existam nesse tempo, no caso do exemplo eles existem 
+                 E(Dendendo ao inifnito menor) impossibilita a execução
+                 de processador maiores 
+                 Detalhe seria necessario saber o tempo  para execultar 
+                 o JOB(Processo)
+            </div>
+            <div class="job de menor tempo restante">
+                 versão preempitivo do job mais curto primeiro  
+                 Em cada unidade de tempo e feito uma verificação
+                 Processo PA inicia chega no t1 ele verifica qual tem o menor 
+                 tempo no caso o PB vai uma unidade de tempo ele verifica de 
+                 novo, e com isso vai escolher o menor novamente, e isso 
+                 sucessivamente. Esse processo tem varias troca de contexto 
+                 Altamente responsivel, e bastante troca de contexto
+            </div>
+            <div class="Round Robin">
+                 preemptivo
+                 ELe e a base do escalonamento do linux.
+                 ELe é definido com quantum de tempo
+                 E o tempo maximo que vou da para o processo 
+                 execultar.
+                 ELe pega o quantum = unidade de tempo 
+                 por um certo tempo, execulta o processo por essa 
+                 unidade de mpo de novo, vai pro proximo 
+                 execulta de novo
+                 relação de adição = n = n-1
+                 Sebdi B ninebti atual de entrada 
+                 Ele execulta de maneira ciclica 
+            </div>
+        </div>
     </div>
 </body>
+<script>
+    var gt ='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';
+</script>
 </html>
