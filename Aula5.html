@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteudo prova 2</title>
+</head>
+<body>
+    <div class="Comunicação interprocesso">
+        troca de informações entre processos
+        Pode ser trocado por arquivo, onde um acessa o mesmo arquivo e salva 
+        e gravar. 
+        Por rede.
+        Espaço de memoria compartilhada.
+        regiões criticas são partes do processo/ thread onde eles fazem 
+        uso de um recurso compartilhado com outros processos 
+        dois processo não podem estar na região critica ao mesmo tempo 
+        <div class="Condição de disputa">
+            quando dois ou mais processos disputam o uso de um recurso 
+            compartilhado, podendo ser variavel(LOgico) ou algo fisico 
+            como impressora(fisico).(Os dois na região critica)
+            E o resultado depende de quem execulta e quando é execultado 
+            Eles tem uma ordem de requisição deixa somente um processo 
+            execultar um certo recurso 
+        </div>
+        <div class="Exclusão multoa">
+            qualquer tecnica que impremente as 4 condições é uma exclusão multoa 
+            inpede dois processos de estarem na região critica 
+            ao mesmo tempo. Quer inpedir que dois processos 
+            estejam nas suas regiões criticas ao mesmo tempo.
+            para isso precisa satisfazer 4 condições ({cai na prova})
+            Primeira condição: Dois procesos não podem estar na sua região 
+            critica ao mesmo tempo 
+            Segunda: Não pode afirma nada sobre velocidade de CPUS/CLock  e numero de cpus
+            Terceiro: Um processo fora da região critica não  pode impedir 
+            outro processo de acessar a região critica, a unica forma de falar 
+            não e se o processo estiver na região critica 
+            Quarto: Um processo não pode esperar eternamente para entrar na sua 
+            região critica, isso é libera o processo, o outro já pode entrar 
+            Nesse tempó que ele fica esperando o processo fica bloqueado 
+            <div class="Tipos de exclusão multoa que não funcionam">
+                primeira forma: Desabilitar interrupções infligem a segunda regra 
+                variaveis de impedimento: Uma variavel que determina se uma 
+                variavel entra ou não na região critica inflige a  terceira 
+                Solução de Pertenson: variaveis de advertencia com alternancia ele tem condição de disputa nas variaveis
+            </div>
+            <div class="Tipos de exclusão multoas que funcionam">
+                mutex: Lock and unlock
+                Semafaro: vc tem um numero de processos que podme entrar 
+                na região critico, 10 impressoras 10 processos podem entrar 
+                na região critica, cada processo decrementa 1 ate chega a 0
+                chega a 0 nenhum outro pode entra, quando ele sai da região 
+                critica ele incrementa um.
+            </div>
+        </div>
+    </div>
+    <div class="Fora de contexto">
+        Espera osciosa: E uma forma de espera que vc usa o poder do processador 
+        para fazer essa espera 
+    </div>
+    <div class="trabalho">
+        git: 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
+    </div>
+</body>
+</html>

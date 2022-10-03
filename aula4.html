@@ -127,18 +127,95 @@
                  ELe é definido com quantum de tempo
                  E o tempo maximo que vou da para o processo 
                  execultar.
-                 ELe pega o quantum = unidade de tempo 
+                 ELe pega o quantum = unidade de tempo = para todo processo
                  por um certo tempo, execulta o processo por essa 
                  unidade de mpo de novo, vai pro proximo 
                  execulta de novo
                  relação de adição = n = n-1
-                 Sebdi B ninebti atual de entrada 
+                 Sendo N numero atual de entrada 
                  Ele execulta de maneira ciclica 
             </div>
+            <div class="Fila de prioridades">
+                preenpitivo
+                Temos varias filas  e cada uma delas tem uma prioridade
+                e em cada fila tem uma quantidade de processos 
+                e em cada fila execulta um Round Robin
+                Usando em um linux e possivelmente no windows 
+                Processo podem mudar de prioridade mas não necessariamente mudam 
+                depende de quantas vezes ele foi execultado ou não 
+                Execulta primeiro as filas de prioridade menor 
+                e depois execulta as outras, só execulta uma depois da de
+                prioridade de cima ser execultada 
+            </div>
+            <div class="Loteria">
+                preemptivo
+                    Entrega um bilhete para cada processo 
+                    Realiza um sorteio 
+                    Processo ganhador recebe o processaor por um quantum de tempo 
+                Altamente responsivo
+            </div>
+            <div class="Escalonamentro de tres niveis">
+                Tres escalonamentos
+                -De Entrada: ELe determinada qual programa vai virar processo 
+                -De Memoria: SWAP da memoria principal para a memoria secundaria
+                -De CPU: Era os outros que a gente viu 
+            </div>                 
+        </div>
+    </div>
+    <div class="Theads">
+        Fluxo de execulção dentro de um processo
+        E a execulção, o fluxo do programa.
+        Processo: Espaço de enderecamento, um unico fluxo de contrele
+        uma thread
+        Multiplas theads:  varios fluxos de controle 
+        no mesmo espaço de endereçamento 
+        Execultando concorrentemente 
+        Concorrencia: Começa algo sem termina o anterior 
+        Paralelismo: Quando consegue fazer duas coisas ao mesmo tempo 
+        exatamente ao mesmo tempo isso é quando tem mais de um processador 
+        para execultar mais de um processo de vez.
+        Elas compartilham o mesmo recurso
+        Modelo de processo: 
+        Agrupamento de recurso
+        Execulçao
+        Theads:
+        Os conceitos acima são separados
+        Theads: Permite execulção no mesmo espaço de processo e compartilham
+        recursos.
+
+        <div class="Modelos de Theads">
+            Processo vai te: Espaço de enderecamento
+                variaveis globais 
+                arquivos aberto 
+                procesos filhos  
+            Thead vai precisar: contador de programa 
+                registradores 
+                pilha 
+                estado
+            Thead sem troca de contexto enqanto for no mesmo processo 
+
+        </div>
+        <div class="Nodelo M:1">
+            Pra cada processo ele vê 1 Thead
+            isso é não importa quantos thead vc manda ele vai ve 1 
+            por processo
+        </div>
+        <div class="Model 1:1">
+            para cada um em modo usuario, vai te uma thead  
+            em modo nucleo. Para cada thead o sistema operacional 
+            vê um processo, isso é se ele receber 6 thead, ele 
+            vai vê 6 processo 
+            muita troca de contexto necessario entre o usuario e o kenel 
+            Linux 
+        </div>
+        <div class="Modelo M:M">
+            A mesma quantidade de nucleos no modo kenel e igual 
+            ou menor a quantidade de theads no modo usuario 
         </div>
     </div>
 </body>
 <script>
+    
     var gt ='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';
 </script>
 </html>
