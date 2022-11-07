@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Sistema de arquivo">
+        <div class="I-node (ext 4)">
+            Arquivos = salvos e mbloco 
+            Um arquivo tem pelo menos um I-node 
+            tem os atributos e os ponteiros 
+            de cada bloco 
+            ao qual ele pode apontar para um bloco vazio que 
+            não tem dados do arquivo mas vai te os ponteiro 
+            para o resto dos arquivos
+            I-node esta salvo no dsico 
+            QUando da open no arquivo ele pega o I-node e joga na meoria ram 
+            I-node de repositorio que aponta para outros i-node de repositorio 
+            e inode de arquivo que aponta para arquivos que esta dentoe de um inode de
+            repositorio 
+          </div>
+    </div>
+    <div class="Gerenciamento de memoria">
+        organizar os procesos são colocados dentro da memoria  principal 
+        Coisas que ele faz:
+            Impede que um processo invada o espaço de memoria de outro processo
+            e o sistema operacional 
+        Monoprogramação e multiprogramação
+        Mono: permite um unico processo em memoria junto com o sistema operacional 
+
+        Partilções de tamanho fixo: 
+            divido a memoria em tamanhos fixos
+            Em cada partição tinha um unico processo 
+            Caso ele seja maior ele não roda 
+            SObra de espaço caso a quantidade seja menor 
+            as partições podem ter espaço diferentes 
+            portanto que elas sejam fixas isso é, não consegue 
+            aumenta ou diminuir o tamanho
+
+        partição de tamanho variavel:
+            se aparece um processo de 2k ele vai e coloca 2k 
+            se aparece um de 1k ele vai e aloca 1k 
+            e assim por diante  ele vai criando as partições 
+            com o tamanho que eu preciso 
+            ao tirar/ acabar um processo vc vai precisar 
+            colocar um processo do tamanho que ele tinha, menor ou igual 
+            e colocar ele nesse ponto aonde foi liberado 
+            então ele gera fragmentação da memoria
+
+        Pginação
+            usa o tamanho fixo com tamanho bem pequenos (pagina)
+            e pegaram o processo e dividiram ele do tamanho 
+            da pagina, e chamaram isso de bloco
+            aonde vc carrega os blocos nas paginas 
+            e apenas o ultimo e de tamanho igual ou menor 
+            do tamanho da pagina, então pode 
+            sobra espaço mas por ser bem pequeno o espaço que perde 
+            e muito pequeno.
+            você só tem um unico espaço de enderecamento, do inicio ao fim 
+            da memoria do 1kb até o 8gb       
+
+        paginaçãocom com area de troca  
+            vc consegue usa o HD para ter mais memoria 
+            atravez de swap,não é só a memoria real que ela ve 
+        
+        
+    </div>
+</body>
+</html>

@@ -10,7 +10,7 @@
 // -1 nada produzido
 // Posição 0 se tem algo produzido ou não  0 nada produzido 1 produziu algo 
 // se preocupar com vetor vazio e vetor cheioo 
-int produtores[10];
+int produtores[10]= [-1];
 int consumidores; //quantidade que for devinida  nos args
 //numero de produtores numero de consumidores 
 // quando for -1 não tem o produto 
@@ -18,6 +18,8 @@ int consumidores; //quantidade que for devinida  nos args
 
 int main (int argc, char *argv[ ]){
     srand(time(NULL));
-    
+    for(int i=0;i<10;i++){
+        printf("%d",produtores[i]);
+    }   
     printf("%d\n", rand() % 10);
 }
