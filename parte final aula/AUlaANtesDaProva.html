@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="Entrada/saida">
+        emitir comandos aos dispositivos 
+        interceptar e tratar interrupções
+        tratar erros 
+        fornecer uma interface entre os dispositivos e o sistema 
+
+        dispositivo de entrada e saida = perifericos 
+        controlador de e/s = e a parte do hardware que controla 
+        os dispostivos de e/s 
+        controlador de e/s = placa de som                                                       
+        dispostivo dele = fone de ouvido bla bla bla
+
+        principios de entrada 
+        que são de bloco = se comunicam enviando blocos (Hierarquiamente HD e E/S)
+        e dispostivos de caractere = se comunicam atravez 
+         de sequencias de bits (caracteres) 
+
+        A comunicação do controlador e do dispostivo e de baixo nivel 
+
+        tres tipo de entrda de saida:
+
+        Por DN: E inserido um novo modulo que é o DNA(Acesso direto a memoria)
+        ao qual ele vai acessar a memoria diretamente em vez do processador 
+        enviar os dados para ele, o processador só avisa que de uma parte 
+        até a outra o modulo DNA precisa pega esses dados 
+
+        E/S Programada: Você tem o processador e uma região de memoria 
+        que vc deseja enviar para o periferico. 
+        O processador pega uma parte desses dados envia para  o controlador 
+        de entrada de saida e fica perguntando se terminou a tarefa já. O processador 
+        que faz a pergunta
+
+        E/S orientada a interrupção: e a mesma coisa que o outro 
+        mas o processador não fica mais perguntando, mas quando terminasse 
+        de tratar os dados o controlador ele avisava o processador que 
+        terminou o trabalho 
+
+        interrupções:
+            bloquear o driver que gerou a Interrupção 
+            Depois disso um tratador de interrupção do sistema operacional 
+            é iniciado, ao qual ele vai ter as atitudes necessarias 
+            para tratar essa interrupção 
+        Driver:
+            E um pedaço de software  de codigo que ensina o SO
+            a conversa com o controlado de E/S especifico, que o driver 
+            tem acesso ao hardware, então o driver é instalado dentro 
+            do sistema operacional, e eles controlam um dispostivo ou uma 
+            classe de dispositivos e eles execultam em modo nucleo.
+            caso crie um novo vc precisa conversar com os drivers padrão 
+            que já existem 
+        Software de ES independente do dispositivo:
+            caracteristicas comum de um gurpo de dispostivo 
+            exemplo, um mouse e teclaod enviam dados, parte comum deles 
+            e enviam caracteres, parte comum tbm 
+        Relatorio de erros:
+            ALguns erros são tratados pelo drive e alguns pelo SO.
+            o software independente do dispostivo vai criar mensagens 
+            ou log, ele tenta tratar tamanhos de blocos diferentes 
+        Software de E/S do espaço do usuario 
+            print, ready,open, close 
+            
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <git>
+        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
+    </git>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div data-prova
+     class="Correção da prova">
+        1- O que é um sistema operacional? 
+            é um software que diferencia dos outros softwares pq ele passa duas funções 
+            especificas, passa uma interface para o programa programador, e gerenciar
+            or recursos do sistema 
+        2- Qual a diferença do modo nucleo e o usuario: Modo usuario não tem acesso 
+        ao hardware, modo nucleo tem acesso ao hardware 
+        3- Qual o papel da chamada do sistema:o programa precisa fazer 
+        chamadas ao sistema para consegui manipular de certa forma o hardware 
+        4- Quais as caracteristicas da arquitetura monolitica e da 
+        arquitetura micro kenel: Monolitica vc tem todos os programas 
+        que cada um cuida de uma determinada função do sistema, depois compila 
+        ele todo em um mesmo bloco indivisivel. Ele é mais rapido 
+        pois não gera troca de contexto ao acessar parte deles, desvantagem 
+        como ele é unico se um trecho do sistema operacional falar 
+        o sistema operacional inteiro falha. Micro kenel, vc coloca varios 
+        processos em modo usuario que eram só do sistema operacional, se um dos 
+        procesos em modo usuairo falahr não quebra o sistema operacional,
+        desvantagem, cada vez que troca o processo tem troca de contexto 
+        5- text = codigo 
+            data = variaveis globais 
+            heap = alocação dinamica 
+            stack = variaveis locais 
+        5-quais as vantagens de threads em  vez de fazer novos processos:
+        mais rapidas de criar,  compartilham recursos dos processos, sem
+        troca de contexto pois esta no mesmo espaço de enderecamento
+        6- o que é escalonamento de procesos: E o ato de tomar
+        um processo de torna posse da CPU. E a parte do sistema operacional 
+        que escolhe qual procesos vai tomar conta do CPU. E 
+        o algoritimo de escalonamento e a logica que o processador usa 
+        para definir qual processo vai tomar conta de CPU
+        6- Descreva como funciona o Rodin Robin:voce tem uma fila 
+        circular,aonbde vc da um quantum de tempo para os procesos 
+        execultarem, indo na ordem dessa fila, e quando um novo 
+        procesos chegar ele vai se colocado no fim da fila
+        7- prncipais estados deu m processo: Bloqueado execultando e pronto(Em espera)
+        execultando o procesos tem a pose do processador 
+        bloqueado: esta esperando uma entrada e saida acontecer(Evento), e enquanto 
+        esse evento não ocorrer ele não pode tomar conta do processador 
+        pronto: São processos que poderiam estar com a posse do processador, 
+        eles querem execultar, mas não podem pq outro esta sendo execultado 
+        esta esperando o processador ser liberado para o escalonador decidir 
+        que eçes vão ter a posse do processador 
+    </div>
+</body>
+</html>
